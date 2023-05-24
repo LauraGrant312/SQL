@@ -1,0 +1,30 @@
+/* Create table about the people and what they do here */
+
+CREATE TABLE famous_people (id INTEGER PRIMARY KEY, full_name TEXT, age INTEGER, country TEXT, occupation TEXT);
+
+INSERT INTO famous_people (full_name, age, country, occupation)       VALUES ("Keanu Reeves", 58, "Lebanon", "actor");
+INSERT INTO famous_people (full_name, age, country, occupation)         VALUES ("Leonardo DiCaprio", 48, "USA", "actor");
+INSERT INTO famous_people (full_name, age, country, occupation)         VALUES ("Adele", 34, "UK", "singer");
+INSERT INTO famous_people (full_name, age, country, occupation)         VALUES ("Mel Robbins", 54, "USA", "motivational speaker");
+INSERT INTO famous_people (full_name, age, country, occupation)         VALUES ("Colleen Hoover", 43, "USA", "author");
+INSERT INTO famous_people (full_name, age, country, occupation)         VALUES ("Emily Henry", NULL, NULL, "author");
+INSERT INTO famous_people (full_name, age, country, occupation)         VALUES ("Christina Aguilara", 42, "USA", "singer");
+INSERT INTO famous_people (full_name, age, country, occupation)         VALUES ("Colin Farrell", 46, "Ireland", "actor");
+INSERT INTO famous_people (full_name, age, country, occupation)         VALUES ("Audrey Hepburn", null, "Belguim", "actress");
+INSERT INTO famous_people (full_name, age, country, occupation)         VALUES ("Billie Lourd", 30, "USA", "actress");
+
+CREATE TABLE occupation (id INTEGER PRIMARY KEY, person_id INTEGER, occupation TEXT);
+INSERT INTO occupation (person_id, occupation) VALUES (1, "actor");
+INSERT INTO occupation (person_id, occupation) VALUES (2, "actor");
+INSERT INTO occupation (person_id, occupation) VALUES (3, "singer");
+INSERT INTO occupation (person_id, occupation) VALUES (4, "motivational speaker");
+INSERT INTO occupation (person_id, occupation) VALUES (5, "author");
+INSERT INTO occupation (person_id, occupation) VALUES (6, "author");
+INSERT INTO occupation (person_id, occupation) VALUES (7, "singer");
+INSERT INTO occupation (person_id, occupation) VALUES (8, "actor");
+INSERT INTO occupation (person_id, occupation) VALUES (9, "actress");
+INSERT INTO occupation (person_id, occupation) VALUES (10, "actress");
+
+SELECT famous_people.full_name, occupation.occupation FROM famous_people JOIN occupation ON famous_people.id = occupation.person_id;
+
+
