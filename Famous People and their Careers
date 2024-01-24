@@ -25,6 +25,7 @@ INSERT INTO occupation (person_id, occupation) VALUES (8, "actor");
 INSERT INTO occupation (person_id, occupation) VALUES (9, "actress");
 INSERT INTO occupation (person_id, occupation) VALUES (10, "actress");
 
-SELECT famous_people.full_name, occupation.occupation FROM famous_people JOIN occupation ON famous_people.id = occupation.person_id;
+SELECT famous_people.full_name, occupation.occupation FROM famous_people 
+JOIN occupation ON famous_people.id = occupation.person_id;
 
 
