@@ -36,8 +36,7 @@ CREATE TABLE customers (
     contact_email TEXT,
     contact_phone TEXT,
     billing_address TEXT,
-    shipping_address TEXT
-);
+    shipping_address TEXT);
     
 -- Create the 'shipments' table     
 CREATE TABLE shipments (
@@ -48,8 +47,7 @@ CREATE TABLE shipments (
     shipping_method TEXT,
     shipping_date DATE,
     delivery_date DATE,
-    status TEXT
-);
+    status TEXT);
 
 -- Insert data into the 'customers' table
 INSERT INTO customers (customer_id, customer_name, contact_email, contact_phone, billing_address, shipping_address)
